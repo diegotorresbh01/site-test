@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "site-test": {
+    "app-heroku": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/site-test",
+            "outputPath": "dist/app-heroku",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -60,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "site-test:build:production"
+              "browserTarget": "app-heroku:build:production"
             },
             "development": {
-              "browserTarget": "site-test:build:development"
+              "browserTarget": "app-heroku:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "site-test:build"
+            "browserTarget": "app-heroku:build"
           }
         },
         "test": {
@@ -96,6 +96,6 @@
     }
   },
   "cli": {
-    "analytics": "f81bc3d1-d737-488d-963c-a67431c7f114"
+    "analytics": "7f2ac680-0532-4c50-a87a-11b0a1f86ab8"
   }
 }
