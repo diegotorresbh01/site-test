@@ -7,12 +7,13 @@
 <script type="text/javascript">
     function open()
     {
-        const targetUrl = "https://totvssign.dev.totvs.app/webapptotvssign/cloud-signature/search";
+        const targetUrl = sessionStorage.getItem('popupUrl');
         console.log('url', targetUrl);
         const popupOptions = 'width=500,height=400,top=100,left=100';
         const newWindow = window.open(targetUrl, '_blank', popupOptions);
         
-        const dataToSend = JSON.stringify({ key: 'value' });
+        const token = sessionStorage.getItem('bearerToken');
+        const dataToSend = JSON.stringify({ token: token, url: window.locatio.href });
         if (newWindow) {
         setTimeout(() => {
             newWindow.postMessage(dataToSend, targetUrl);
